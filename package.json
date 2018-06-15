@@ -7,6 +7,9 @@
   "author": "Jérôme Desboeufs <jerome.desboeufs@gmail.com>",
   "license": "MIT",
   "private": false,
+  "bin": {
+    "addok-geocode": "cli.js"
+  },
   "scripts": {
     "lint": "xo"
   },
