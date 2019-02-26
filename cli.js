@@ -33,13 +33,16 @@ const {argv} = yargs
       if (!v) {
         return 1
       }
+
       if (!v.match(/\d+/)) {
         throw new Error('Not supported value for concurrency')
       }
+
       const parsedValue = parseInt(v, 10)
       if (parsedValue <= 0) {
         throw new Error('Not supported value for concurrency')
       }
+
       return parsedValue
     },
     default: '1'
@@ -53,9 +56,11 @@ function getSeparator(argv) {
   if (argv.semicolon) {
     return ';'
   }
+
   if (argv.tab) {
     return '\t'
   }
+
   return ','
 }
 
