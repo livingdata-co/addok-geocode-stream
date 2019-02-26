@@ -14,18 +14,18 @@
     "lint": "xo"
   },
   "dependencies": {
-    "csv-parser": "^1.12.1",
+    "csv-parser": "^2.1.0",
     "csv-write-stream": "^2.0.0",
-    "get-stream": "^3.0.0",
-    "iconv-lite": "^0.4.23",
+    "get-stream": "^4.1.0",
+    "iconv-lite": "^0.4.24",
     "jschardet-french": "^0.0.1",
     "mississippi": "^3.0.0",
     "strip-bom-stream": "^3.0.0",
-    "superagent": "^3.8.3",
-    "yargs": "^11.0.0"
+    "superagent": "^4.1.0",
+    "yargs": "^13.2.1"
   },
   "devDependencies": {
-    "xo": "^0.21.1"
+    "xo": "^0.24.0"
   },
   "xo": {
     "semicolon": false,
