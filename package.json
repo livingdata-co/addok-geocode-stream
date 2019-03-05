@@ -16,12 +16,13 @@
   "dependencies": {
     "csv-parser": "^2.2.0",
     "csv-write-stream": "^2.0.0",
+    "form-data": "^2.3.3",
     "get-stream": "^4.1.0",
+    "got": "^9.6.0",
     "iconv-lite": "^0.4.24",
     "jschardet-french": "^0.0.1",
     "mississippi": "^3.0.0",
     "strip-bom-stream": "^3.0.0",
-    "superagent": "^4.1.0",
     "yargs": "^13.2.1"
   },
   "devDependencies": {
