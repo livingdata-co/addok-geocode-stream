@@ -14,7 +14,7 @@
     "lint": "xo"
   },
   "dependencies": {
-    "csv-parser": "^2.1.0",
+    "csv-parser": "^2.2.0",
     "csv-write-stream": "^2.0.0",
     "get-stream": "^4.1.0",
     "iconv-lite": "^0.4.24",
