@@ -1,6 +1,6 @@
 #!/usr/bin/env node
+const {pipeline} = require('stream')
 const yargs = require('yargs')
-const {pipe} = require('mississippi')
 const parse = require('csv-parser')
 const stringify = require('csv-write-stream')
 const {decodeStream} = require('./lib/decode')
@@ -73,7 +73,7 @@ function getSeparator(argv) {
 const separator = getSeparator(argv)
 const {service, concurrency, columns} = argv
 
-pipe(
+pipeline(
   process.stdin,
   decodeStream(),
   parse({separator}),
