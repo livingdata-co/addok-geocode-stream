@@ -23,6 +23,8 @@ Options:
   --service            Set geocoding service URL
                                    [default: "https://api-adresse.data.gouv.fr"]
   --columns            Select columns to geocode, in the right order
+  --citycode           Filter results by citycode
+  --postcode           Filter results by postcode
   --semicolon, --semi  Use semicolon (;) as separator                  [boolean]
   --tab                Use tabulation as separator                     [boolean]
   --concurrency        Set how many requests must be executed concurrently

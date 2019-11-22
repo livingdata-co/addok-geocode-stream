@@ -17,6 +17,12 @@ const {argv} = yargs
     describe: 'Select columns to geocode, in the right order',
     coerce: c => c.split(',')
   })
+  .option('citycode', {
+    describe: 'Filter results by citycode'
+  })
+  .option('postcode', {
+    describe: 'Filter results by postcode'
+  })
   .option('semicolon', {
     alias: 'semi',
     describe: 'Use semicolon (;) as separator',
