@@ -32,6 +32,10 @@ const {argv} = yargs
     describe: 'Use tabulation as separator',
     boolean: true
   })
+  .option('pipe', {
+    describe: 'Use pipe as separator',
+    boolean: true
+  })
   .option('concurrency', {
     describe: 'Set how many requests must be executed concurrently',
     type: 'number',
@@ -65,6 +69,10 @@ function getSeparator(argv) {
 
   if (argv.tab) {
     return '\t'
+  }
+
+  if (argv.pipe) {
+    return '|'
   }
 
   return ','

@@ -27,6 +27,7 @@ Options:
   --postcode           Filter results by postcode
   --semicolon, --semi  Use semicolon (;) as separator                  [boolean]
   --tab                Use tabulation as separator                     [boolean]
+  --pipe               Use pipe as separator                           [boolean]
   --concurrency        Set how many requests must be executed concurrently
                                                          [number] [default: "1"]
   --encoding           Set data encoding. Can be detected automatically
