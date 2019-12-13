@@ -81,11 +81,15 @@ function getSeparator(argv) {
 const separator = getSeparator(argv)
 const {service, concurrency, columns} = argv
 
+function onUnwrap(totalCount) {
+  console.error(`    geocoding progress: ${totalCount}`)
+}
+
 pipeline(
   process.stdin,
   decodeStream(),
   parse({separator}),
-  createGeocodeStream(service, {columns, concurrency, bucketSize: 200}),
+  createGeocodeStream(service, {columns, concurrency, bucketSize: 200, onUnwrap}),
   stringify({separator}),
   process.stdout,
   err => {
