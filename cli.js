@@ -36,6 +36,11 @@ const {argv} = yargs
     describe: 'Use pipe as separator',
     boolean: true
   })
+  .option('bucket', {
+    describe: 'Set how many rows are sent in each request',
+    type: 'number',
+    default: 200
+  })
   .option('concurrency', {
     describe: 'Set how many requests must be executed concurrently',
     type: 'number',
@@ -79,7 +84,7 @@ function getSeparator(argv) {
 }
 
 const separator = getSeparator(argv)
-const {service, concurrency, columns} = argv
+const {service, concurrency, columns, bucket} = argv
 
 function onUnwrap(totalCount) {
   console.error(`    geocoding progress: ${totalCount}`)
@@ -89,7 +94,7 @@ pipeline(
   process.stdin,
   decodeStream(),
   parse({separator}),
-  createGeocodeStream(service, {columns, concurrency, bucketSize: 200, onUnwrap}),
+  createGeocodeStream(service, {columns, concurrency, bucketSize: bucket, onUnwrap}),
   stringify({separator}),
   process.stdout,
   err => {

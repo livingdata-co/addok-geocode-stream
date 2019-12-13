@@ -28,6 +28,8 @@ Options:
   --semicolon, --semi  Use semicolon (;) as separator                  [boolean]
   --tab                Use tabulation as separator                     [boolean]
   --pipe               Use pipe as separator                           [boolean]
+  --bucket             Set how many rows are sent in each request
+                                                         [number] [default: 200]
   --concurrency        Set how many requests must be executed concurrently
                                                          [number] [default: "1"]
   --encoding           Set data encoding. Can be detected automatically
