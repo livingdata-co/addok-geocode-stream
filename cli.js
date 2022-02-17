@@ -38,7 +38,14 @@ const {argv} = yargs
   })
   .option('result', {
     describe: 'Select columns you want to be added to the result by the geocoder. Default: all',
-    coerce: c => c.split(',')
+    coerce: c => {
+      if (!c) {
+        return []
+      } else {
+        return c.split(',')
+      }
+    }
+
   })
   .option('bucket', {
     describe: 'Set how many rows are sent in each request',
