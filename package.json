@@ -1,9 +1,9 @@
 {
   "name": "addok-geocode-stream",
   "version": "0.10.0",
-  "description": "Node.js stream API for addok geocoder",
+  "description": "Node.js stream API and CLI for addok geocoder",
   "main": "index.js",
-  "repository": "git@github.com:jdesboeufs/addok-geocode-stream.git",
+  "repository": "https://github.com/jdesboeufs/addok-geocode-stream",
   "author": "Jérôme Desboeufs <jerome.desboeufs@gmail.com>",
   "license": "MIT",
   "private": false,
