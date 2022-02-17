@@ -29,11 +29,19 @@
   },
   "devDependencies": {
     "ava": "^4.0.1",
-    "xo": "^0.25.3"
+    "xo": "^0.48.0"
   },
   "xo": {
     "semicolon": false,
-    "space": 2
+    "space": 2,
+    "rules": {
+      "comma-dangle": ["error", "never"],
+      "unicorn/prefer-module": "off",
+      "unicorn/no-array-for-each": "off",
+      "import/extensions": "off",
+      "node/prefer-global/buffer": "off",
+      "node/prefer-global/process": "off"
+    }
   },
   "engines": {
     "node": ">= 12"
