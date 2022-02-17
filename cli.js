@@ -48,16 +48,16 @@ const {argv} = yargs
   .option('concurrency', {
     describe: 'Set how many requests must be executed concurrently',
     type: 'number',
-    coerce: v => {
+    coerce(v) {
       if (!v) {
         return 1
       }
 
-      if (!v.match(/\d+/)) {
+      if (!/\d+/.test(v)) {
         throw new Error('Not supported value for concurrency')
       }
 
-      const parsedValue = parseInt(v, 10)
+      const parsedValue = Number.parseInt(v, 10)
       if (parsedValue <= 0) {
         throw new Error('Not supported value for concurrency')
       }
@@ -107,9 +107,9 @@ pipeline(
   }),
   stringify({separator}),
   process.stdout,
-  err => {
-    if (err) {
-      console.error(err)
+  error => {
+    if (error) {
+      console.error(error)
       process.exit(1)
     }
   }
