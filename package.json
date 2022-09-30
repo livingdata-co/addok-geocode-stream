@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "ava": "^4.3.3",
-    "xo": "^0.48.0"
+    "xo": "^0.52.3"
   },
   "xo": {
     "semicolon": false,
@@ -41,8 +41,7 @@
         "never"
       ],
       "unicorn/no-array-for-each": "off",
-      "node/prefer-global/buffer": "off",
-      "node/prefer-global/process": "off"
+      "unicorn/text-encoding-identifier-case": "off"
     }
   },
   "engines": {

@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import process from 'node:process'
 import {pipeline} from 'node:stream'
 import yargs from 'yargs'
 import parse from 'csv-parser'
