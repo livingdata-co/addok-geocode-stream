@@ -1,13 +1,15 @@
 #!/usr/bin/env node
+/* eslint n/file-extension-in-import: off */
 import process from 'node:process'
 import {pipeline} from 'node:stream'
 import yargs from 'yargs'
+import {hideBin} from 'yargs/helpers'
 import parse from 'csv-parser'
 import stringify from 'csv-write-stream'
 import {decodeStream} from './lib/decode.js'
 import {createGeocodeStream} from './index.js'
 
-const {argv} = yargs
+const {argv} = yargs(hideBin(process.argv))
   .usage('$0 [options]')
   .detectLocale(false)
   .option('service', {
