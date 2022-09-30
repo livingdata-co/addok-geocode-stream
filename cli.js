@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-const {pipeline} = require('stream')
-const yargs = require('yargs')
-const parse = require('csv-parser')
-const stringify = require('csv-write-stream')
-const {decodeStream} = require('./lib/decode')
-const {createGeocodeStream} = require('.')
+import {pipeline} from 'node:stream'
+import yargs from 'yargs'
+import parse from 'csv-parser'
+import stringify from 'csv-write-stream'
+import {decodeStream} from './lib/decode.js'
+import {createGeocodeStream} from './index.js'
 
 const {argv} = yargs
   .usage('$0 [options]')

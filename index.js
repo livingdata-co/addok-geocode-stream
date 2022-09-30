@@ -1,1 +1,1 @@
-module.exports = require('./lib/stream')
+export * from './lib/stream.js'

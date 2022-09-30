@@ -7,6 +7,7 @@
   "author": "Jérôme Desboeufs <jerome.desboeufs@gmail.com>",
   "license": "MIT",
   "private": false,
+  "type": "module",
   "bin": {
     "addok-geocode": "cli.js"
   },
@@ -22,7 +23,7 @@
     "got": "^11.8.3",
     "iconv-lite": "^0.6.3",
     "jschardet": "^3.0.0",
-    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
     "mississippi": "^4.0.0",
     "strip-bom-stream": "^4.0.0",
     "yargs": "^17.3.1"
@@ -39,9 +40,7 @@
         "error",
         "never"
       ],
-      "unicorn/prefer-module": "off",
       "unicorn/no-array-for-each": "off",
-      "import/extensions": "off",
       "node/prefer-global/buffer": "off",
       "node/prefer-global/process": "off"
     }
