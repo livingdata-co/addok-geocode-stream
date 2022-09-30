@@ -25,7 +25,7 @@
     "jschardet": "^3.0.0",
     "lodash-es": "^4.17.21",
     "mississippi": "^4.0.0",
-    "strip-bom-stream": "^4.0.0",
+    "strip-bom-stream": "^5.0.0",
     "yargs": "^17.3.1"
   },
   "devDependencies": {
