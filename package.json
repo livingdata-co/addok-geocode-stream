@@ -45,6 +45,11 @@
       "unicorn/text-encoding-identifier-case": "off"
     }
   },
+  "ava": {
+    "environmentVariables": {
+      "GEOCODER_COLUMN_PREFIX": "geocoder__"
+    }
+  },
   "engines": {
     "node": ">= 16"
   }
