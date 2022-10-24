@@ -30,8 +30,8 @@
     "yargs": "^17.5.1"
   },
   "devDependencies": {
-    "ava": "^4.3.3",
-    "xo": "^0.52.3"
+    "ava": "^5.0.1",
+    "xo": "^0.52.4"
   },
   "xo": {
     "semicolon": false,
