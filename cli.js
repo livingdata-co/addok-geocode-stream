@@ -26,6 +26,12 @@ const {argv} = yargs(hideBin(process.argv))
   .option('postcode', {
     describe: 'Filter results by postcode'
   })
+  .option('lon', {
+    describe: 'Define longitude column (geo affinity)'
+  })
+  .option('lat', {
+    describe: 'Define latitude column (geo affinity)'
+  })
   .option('semicolon', {
     alias: 'semi',
     describe: 'Use semicolon (;) as separator',

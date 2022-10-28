@@ -25,6 +25,8 @@ Options:
   --columns            Select columns to geocode, in the right order
   --citycode           Filter results by citycode
   --postcode           Filter results by postcode
+  --lon                Define longitude column (geo affinity)
+  --lat                Define latitude column (geo affinity)
   --semicolon, --semi  Use semicolon (;) as separator                  [boolean]
   --tab                Use tabulation as separator                     [boolean]
   --pipe               Use pipe as separator                           [boolean]
