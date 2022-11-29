@@ -42,7 +42,8 @@
         "never"
       ],
       "unicorn/no-array-for-each": "off",
-      "unicorn/text-encoding-identifier-case": "off"
+      "unicorn/text-encoding-identifier-case": "off",
+      "unicorn/prevent-abbreviations": "off"
     }
   },
   "ava": {
