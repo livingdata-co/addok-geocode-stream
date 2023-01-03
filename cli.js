@@ -107,7 +107,8 @@ pipeline(
   process.stdin,
   decodeStream(),
   parse({separator}),
-  createGeocodeStream(service, {
+  createGeocodeStream({
+    serviceUrl: service,
     columns,
     concurrency,
     bucketSize: bucket,
