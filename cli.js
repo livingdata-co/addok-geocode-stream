@@ -14,6 +14,10 @@ import {createGeocodeStream} from './index.js'
 const {argv} = yargs(hideBin(process.argv))
   .usage('$0 [options]')
   .detectLocale(false)
+  .option('reverse', {
+    describe: 'Reverse mode',
+    boolean: true
+  })
   .option('service', {
     describe: 'Set geocoding service URL',
     default: 'https://api-adresse.data.gouv.fr'
@@ -105,7 +109,12 @@ function getSeparator(argv) {
 }
 
 const separator = getSeparator(argv)
-const {service, strategy, concurrency, columns, bucket, result, clusterConfig} = argv
+const {reverse, service, strategy, concurrency, columns, bucket, result, clusterConfig, lon, lat} = argv
+
+if (reverse && (!lon || !lat)) {
+  console.error('Error: You must provide lon/lat params to use reverse mode')
+  process.exit(1)
+}
 
 function onUnwrap(totalCount) {
   console.error(`    geocoding progress: ${totalCount}`)
@@ -121,6 +130,7 @@ pipeline(
   decodeStream(),
   parse({separator}),
   createGeocodeStream({
+    reverse,
     serviceUrl: service,
     strategy,
     cluster,
