@@ -20,6 +20,7 @@ addok-geocode [options]
 Options:
   --help               Show help                                       [boolean]
   --version            Show version number                             [boolean]
+  --reverse            Reverse mode                                    [boolean]
   --service            Set geocoding service URL
                                    [default: "https://api-adresse.data.gouv.fr"]
   --strategy           Set geocoding strategy: csv, batch or cluster
