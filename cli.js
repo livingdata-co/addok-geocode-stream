@@ -109,12 +109,7 @@ function getSeparator(argv) {
 }
 
 const separator = getSeparator(argv)
-const {reverse, service, strategy, concurrency, columns, bucket, result, clusterConfig, lon, lat} = argv
-
-if (reverse && (!lon || !lat)) {
-  console.error('Error: You must provide lon/lat params to use reverse mode')
-  process.exit(1)
-}
+const {reverse, service, strategy, concurrency, columns, bucket, result, clusterConfig} = argv
 
 function onUnwrap(totalCount) {
   console.error(`    geocoding progress: ${totalCount}`)
