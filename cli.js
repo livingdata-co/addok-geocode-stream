@@ -59,7 +59,7 @@ const {argv} = yargs(hideBin(process.argv))
     type: 'number',
     coerce(v) {
       if (!v) {
-        return 1
+        return
       }
 
       if (!/\d+/.test(v)) {
@@ -72,8 +72,7 @@ const {argv} = yargs(hideBin(process.argv))
       }
 
       return parsedValue
-    },
-    default: '1'
+    }
   })
   .option('encoding', {
     describe: 'Set data encoding. Can be detected automatically',
