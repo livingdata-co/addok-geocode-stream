@@ -16,7 +16,7 @@
     "test": "ava"
   },
   "dependencies": {
-    "addok-cluster": "^0.3.0",
+    "addok-cluster": "^0.3.1",
     "csv-parser": "^3.0.0",
     "csv-write-stream": "^2.0.0",
     "form-data": "^4.0.0",
