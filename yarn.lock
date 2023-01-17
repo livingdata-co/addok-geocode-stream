@@ -277,16 +277,16 @@ acorn@^8.8.1:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.8.1.tgz#0a3f9cbecc4ec3bea6f0a80b66ae8dd2da250b73"
   integrity sha512-7zFpHzhnqYKrkYdUjF1HI1bzd0VygEGX8lFk4k5zVMqHEoES+P+7TKI+EvLO9WVMJ8eekdO0aDEK044xTXwPPA==
 
-addok-cluster@^0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/addok-cluster/-/addok-cluster-0.3.2.tgz#342d84249fa805ce0ad12842dc751eb171e4ced8"
-  integrity sha512-+63lMoLLhAZAhmOmT7Z3FwGQ0PEvijRIHzUNdbX/woqATqux7Z/afDNZpgg/FsoCiTRUkBCQ0VvccGmhbvBSAQ==
+addok-cluster@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/addok-cluster/-/addok-cluster-0.4.1.tgz#cd970d96b8c3569d4298684f487ce91012061734"
+  integrity sha512-9Fg97K12u9p7h4LwcXrs9neJOCY0RCg8pzfbb6Vaz+lzItUpgwgdvdHIIHYbZq7cqwelS5TXoryS8qz39J0sbA==
   dependencies:
     debug "^4.3.4"
     http-errors "^2.0.0"
     lodash-es "^4.17.21"
     python-shell "^3.0.1"
-    supports-color "^9.2.3"
+    supports-color "^9.3.1"
 
 aggregate-error@^4.0.0:
   version "4.0.0"
@@ -3446,7 +3446,7 @@ supports-color@^7.0.0, supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-supports-color@^9.2.3:
+supports-color@^9.3.1:
   version "9.3.1"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-9.3.1.tgz#34e4ad3c71c9a39dae3254ecc46c9b74e89e15a6"
   integrity sha512-knBY82pjmnIzK3NifMo3RxEIRD9E0kIzV4BKcyTZ9+9kWgLMxd4PrsTSMoFQUabgRBbF8KOLRDCyKgNV+iK44Q==
