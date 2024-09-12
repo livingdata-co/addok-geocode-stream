@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "ava": "^6.1.3",
-    "xo": "^0.53.1"
+    "xo": "^0.59.3"
   },
   "xo": {
     "semicolon": false,
@@ -42,6 +42,10 @@
         "error",
         "never"
       ],
+      "import/order": ["error", {
+        "newlines-between": "ignore"
+      }],
+      "object-curly-newline": "off",
       "unicorn/no-array-for-each": "off",
       "unicorn/text-encoding-identifier-case": "off",
       "unicorn/prevent-abbreviations": "off"
