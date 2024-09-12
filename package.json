@@ -28,7 +28,7 @@
     "parallel-transform": "^1.2.0",
     "pumpify": "^2.0.1",
     "strip-bom-stream": "^5.0.0",
-    "yargs": "^17.6.2"
+    "yargs": "^17.7.2"
   },
   "devDependencies": {
     "ava": "^6.1.3",
