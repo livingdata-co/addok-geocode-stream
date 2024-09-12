@@ -1,6 +1,6 @@
 {
   "name": "addok-geocode-stream",
-  "version": "0.22.0",
+  "version": "0.23.0",
   "description": "Node.js stream API and CLI for addok geocoder",
   "main": "index.js",
   "repository": "https://github.com/livingdata-co/addok-geocode-stream",
@@ -42,9 +42,12 @@
         "error",
         "never"
       ],
-      "import/order": ["error", {
-        "newlines-between": "ignore"
-      }],
+      "import/order": [
+        "error",
+        {
+          "newlines-between": "ignore"
+        }
+      ],
       "object-curly-newline": "off",
       "unicorn/no-array-for-each": "off",
       "unicorn/text-encoding-identifier-case": "off",
