@@ -5,7 +5,7 @@ import process from 'node:process'
 import {pipeline} from 'node:stream'
 import yargs from 'yargs'
 import {hideBin} from 'yargs/helpers'
-import parse from 'csv-parser'
+import Papa from 'papaparse'
 import stringify from 'csv-write-stream'
 import {createCluster} from 'addok-cluster'
 import {decodeStream} from './lib/decode.js'
@@ -123,7 +123,7 @@ if (strategy === 'cluster') {
 pipeline(
   process.stdin,
   decodeStream(),
-  parse({separator}),
+  Papa.parse(Papa.NODE_STREAM_INPUT, {delimiter: separator, header: true}),
   createGeocodeStream({
     reverse,
     serviceUrl: service,
