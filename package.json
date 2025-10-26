@@ -19,7 +19,6 @@
     "addok-cluster": "^0.11.0",
     "csv-parser": "^3.2.0",
     "csv-write-stream": "^2.0.0",
-    "form-data": "^4.0.2",
     "got": "^14.4.7",
     "iconv-lite": "^0.7.0",
     "jschardet": "^3.1.4",
