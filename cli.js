@@ -30,11 +30,25 @@ const {argv} = yargs(hideBin(process.argv))
     describe: 'Select columns to geocode, in the right order',
     coerce: c => c.split(',')
   })
-  .option('citycode', {
-    describe: 'Filter results by citycode'
-  })
-  .option('postcode', {
-    describe: 'Filter results by postcode'
+  .option('filter', {
+    describe: 'Filter results by a specific field (format: filter-name=column-name). Can be used multiple times',
+    type: 'array',
+    coerce(filters) {
+      if (!filters) {
+        return {}
+      }
+
+      const result = {}
+
+      for (const filter of filters) {
+        const [name, value] = filter.split('=')
+        if (name && value) {
+          result[name] = value
+        }
+      }
+
+      return result
+    }
   })
   .option('lon', {
     describe: 'Define longitude column (geo affinity)'
@@ -109,7 +123,7 @@ function getSeparator(argv) {
 }
 
 const separator = getSeparator(argv)
-const {reverse, service, strategy, concurrency, columns, bucket, result, clusterConfig} = argv
+const {reverse, service, strategy, concurrency, columns, bucket, result, clusterConfig, filter} = argv
 
 function onUnwrap(totalCount) {
   console.error(`    geocoding progress: ${totalCount}`)
@@ -133,6 +147,7 @@ pipeline(
     concurrency,
     bucketSize: bucket,
     resultColumns: result,
+    filters: filter,
     onUnwrap
   }),
   stringify({separator}),

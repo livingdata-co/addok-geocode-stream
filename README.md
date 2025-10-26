@@ -26,8 +26,9 @@ Options:
   --strategy           Set geocoding strategy: csv, batch or cluster
                                                                 [default: "csv"]
   --columns            Select columns to geocode, in the right order
-  --citycode           Filter results by citycode
-  --postcode           Filter results by postcode
+  --filter             Filter results by a specific field
+                       (format: filter-name=filter-value).
+                       Can be used multiple times for different filters
   --lon                Define longitude column (geo affinity)
   --lat                Define latitude column (geo affinity)
   --semicolon, --semi  Use semicolon (;) as separator                  [boolean]
@@ -49,3 +50,33 @@ Options:
 ```bash
 cat my-addresses.csv | addok-geocode --columns numero,voie,code_postal,ville --semicolon > my-geocoded-addresses.csv
 ```
+
+#### Using filters
+
+The `--filter` option allows you to filter geocoding results by specific fields supported by your addok instance. The format is `--filter filter-name=column-name`, where `filter-name` is the filter accepted by addok and `column-name` is the column in your CSV file.
+
+You can use multiple filters:
+
+```bash
+# Filter by citycode
+cat addresses.csv | addok-geocode --columns address --filter citycode=code_insee > geocoded.csv
+
+# Filter by postcode
+cat addresses.csv | addok-geocode --columns address --filter postcode=cp > geocoded.csv
+
+# Use multiple filters
+cat addresses.csv | addok-geocode --columns address --filter citycode=code_insee --filter type=address_type > geocoded.csv
+```
+
+##### Multiple values with OR operator
+
+A column can contain multiple values separated by `+`, which will be combined with an OR operator:
+
+```bash
+# If your CSV has a column "codes" with values like "75001+75002+75003"
+cat addresses.csv | addok-geocode --columns address --filter citycode=codes > geocoded.csv
+```
+
+This will search for addresses matching citycode 75001 OR 75002 OR 75003.
+
+**Note:** The available filters depend on your addok instance configuration. Common filters include `citycode`, `postcode`, `type`, but your instance may support additional custom filters.
