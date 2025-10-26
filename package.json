@@ -17,11 +17,11 @@
   },
   "dependencies": {
     "addok-cluster": "^0.11.0",
+    "chardet": "^2.1.0",
     "csv-parser": "^3.2.0",
     "csv-write-stream": "^2.0.0",
     "got": "^14.6.1",
     "iconv-lite": "^0.7.0",
-    "jschardet": "^3.1.4",
     "lodash-es": "^4.17.21",
     "papaparse": "5.3.2",
     "parallel-transform": "^1.2.0",
