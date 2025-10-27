@@ -1,0 +1,31 @@
+# Tests
+**/__tests__/
+*.test.js
+
+# Development files
+.git/
+.gitignore
+.github/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Documentation development
+docs/
+
+# CI/CD
+.travis.yml
+.gitlab-ci.yml
+circle.yml
+appveyor.yml
+
+# Misc
+.DS_Store
+npm-debug.log
+yarn-error.log
+coverage/
+.nyc_output/
