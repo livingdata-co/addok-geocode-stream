@@ -1,6 +1,6 @@
 {
   "name": "addok-geocode-stream",
-  "version": "0.26.0",
+  "version": "0.27.0",
   "description": "Node.js stream API and CLI for addok geocoder",
   "main": "index.js",
   "repository": "https://github.com/livingdata-co/addok-geocode-stream",
